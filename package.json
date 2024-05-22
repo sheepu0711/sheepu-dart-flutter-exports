@@ -1,14 +1,14 @@
 {
-  "name": "dart-flutter-exports",
+  "name": "sheepu-dart-flutter-exports",
   "displayName": "Dart & Flutter Exports",
   "description": "Creates export files for Dart & Flutter folders",
   "version": "1.0.2",
-  "publisher": "elmsec",
+  "publisher": "sheepu0711",
   "icon": "icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elmsec/dart-flutter-exports"
+    "url": "https://github.com/sheepu0711/sheepu-dart-flutter-exports"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -18,17 +18,27 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Dart Barrel Export File Generator",
+      "properties": {
+        "sheepuDartFlutterExports.showCredits": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable this to show credits or not in the generated files"
+        }
+      }
+    },
     "commands": [
       {
-        "command": "dart-flutter-exports.createExporterFiles",
-        "title": "Generate Dart export files"
+        "command": "sheepu-dart-flutter-exports.createExporterFiles",
+        "title": "Generate Dart export files using Sheepu Dart Flutter Exports"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "when": "explorerResourceIsFolder",
-          "command": "dart-flutter-exports.createExporterFiles",
+          "command": "sheepu-dart-flutter-exports.createExporterFiles",
           "group": "navigation@1000"
         }
       ]
